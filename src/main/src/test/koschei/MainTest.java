@@ -1,4 +1,6 @@
-import koschei.KoscheiTheDeathless;
+package koschei;
+
+import junit.framework.TestCase;
 import koschei.config.AppConfig;
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AppConfig.class)
-public class MainTest {
+public class MainTest extends TestCase {
 
     @Autowired
     private ApplicationContext applicationContext;
@@ -28,5 +30,4 @@ public class MainTest {
             Assert.fail("Тест провален, не корректная связь бинов. Итоговая фраза не верна.");
         }
     }
-
 }
